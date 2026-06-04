@@ -16,3 +16,30 @@ class Main {
     }
 }
 
+
+
+
+
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        
+       Scanner input = new Scanner(System.in);
+       
+       System.out.print("Enter Inteiro: ");
+       
+       double num_int = input.nextInt();
+       
+       System.out.print("Digite o texto: ");
+       
+       String texto = input.next();
+       
+       System.out.println("Texto digitado = " + texto);
+       
+       input.close(); } }
+
+
+
+
+
+
