@@ -65,3 +65,42 @@ class Main {
         input.close(); 
     } 
 }
+
+
+
+
+
+//LANÇAMENTO DE NOTAS
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+         
+        Scanner input = new Scanner(System.in);
+        
+        double n1, n2, n3, n4;
+        
+        // Usei println com \n para pular uma linha e ficar mais organizado
+        System.out.println("--- BEM VINDO AO PORTAL DO ALUNO, DIGITE AQUI AS NOTAS ---\n");
+        
+        // 1º Passo: Mostra a mensagem na tela
+        System.out.print("Digite a Nota 1: ");
+        // 2º Passo: O programa para, espera o usuário digitar e guarda em n1
+        n1 = input.nextDouble(); 
+        
+        // Agora você pode repetir o mesmo processo para as outras notas:
+        System.out.print("Digite a Nota 2: ");
+        n2 = input.nextDouble();
+        
+        System.out.print("Digite a Nota 3: ");
+        n3 = input.nextDouble();
+        
+        System.out.print("Digite a Nota 4: ");
+        n4 = input.nextDouble();
+        
+        // Se quiser, no final você pode mostrar as notas digitadas para confirmar:
+        System.out.println("\nNotas salvas com sucesso!");
+        
+        input.close(); 
+    }
+}
