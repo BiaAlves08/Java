@@ -98,8 +98,12 @@ class Main {
         System.out.print("Digite a Nota 4: ");
         n4 = input.nextDouble();
         
-        // Se quiser, no final você pode mostrar as notas digitadas para confirmar:
-        System.out.println("\nNotas salvas com sucesso!");
+              double media = (n1+n2+n3+n4)/4;
+              System.out.println("\nMédia final é: ", media);
+        
+        if(media<=3) {
+            System.out.println("Aluno ficou retido");
+        }
         
         input.close(); 
     }
