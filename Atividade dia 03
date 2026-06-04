@@ -43,3 +43,25 @@ class Main {
 
 
 
+//REPETIÇÃO DO NOME
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+         
+        Scanner input = new Scanner(System.in);
+        
+        int n;
+        
+        System.out.print("Digite o nome que deseja: ");
+        String nome = input.next(); 
+        
+        System.out.println("\n---Repeticao do nome---");
+
+        for (n = 0; n < 5; n++) {
+            System.out.println("Nome escolhido: " + nome);
+        }
+        
+        input.close(); 
+    } 
+}
