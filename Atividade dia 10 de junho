@@ -1,0 +1,41 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int[] idade = new int [5];
+        int i;
+        
+        idade[0]= 80;
+        idade[1]= 22;
+        idade[2]= idade[0]+idade[1];
+        idade[3]= 20;
+        idade[4]= 50;
+        
+        /*for(i=0; i<=4; i++) {
+            System.out.println("Posicao " + i + ": " + idade[i]);
+        }
+        */
+        
+        //Usando variável boleanea em questões de verdadeiro ou falso
+        boolean continua = true;
+        int num = 0;
+        while(continua) {
+            System.out.println("Idade: " + idade[num]);
+            num++;
+            
+            if(num==5) {
+                break;
+            }
+        }
+        
+        //Comando do while
+        
+        int x =0;
+        do {
+            System.out.println("Idade: " + idade[x]);
+            x++;
+        } while (x<=4);
+        
+    }
+}
