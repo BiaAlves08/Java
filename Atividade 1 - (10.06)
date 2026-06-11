@@ -1,12 +1,13 @@
+//
 import java.util.Scanner;
 
 class Input {
     public static void main(String[] args) {
      String[] nome = new String[5];
      int[] idade = new int[5];
-     Scanner entrada = new Scanner(System.in);
 
 for (int i=0; i<=4; i++) {
+     Scanner entrada = new Scanner(System.in);
     System.out.print("Digite seu nome: ");
     nome[i] = entrada.nextLine();
     System.out.print("Digite sua idade: ");
@@ -14,6 +15,5 @@ for (int i=0; i<=4; i++) {
     entrada.nextLine();
     System.out.println();
 }
-    entrada.close();
     }
 }
