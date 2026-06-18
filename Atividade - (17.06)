@@ -10,7 +10,7 @@ class Main {
         
         int estoque, qtdeMax, qtdeMin, media = 0;
         
-        double alunos;
+        double notas, somaNotas = 0;
         int a =0;
         
         
@@ -122,9 +122,13 @@ class Main {
                 
                 for(a=1; a<=20; a++) {
                   System.out.print("Digite a nota do aluno " + a + ": ");
-                    alunos = scanner.nextInt();
+                    notas = scanner.nextInt();
                     
-                    media = 
+                    somaNotas += notas;
+                    
+                    media = (somaNotas)/20;
+                    System.out.println("\nMedia: " + media);
+                    
                 }
                 
                 break;
