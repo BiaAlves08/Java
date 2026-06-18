@@ -1,0 +1,142 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        double salarioFixo, valorVendas, comissao =0, salarioTotal;
+        int opcao;
+        
+        int conta;
+        double saldo = 0, debito, credito, saldoAtual;
+        
+        int estoque, qtdeMax, qtdeMin, media = 0;
+        
+        double alunos;
+        int a =0;
+        
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("--ESCOLHA UMA OPCAO--");
+        System.out.println("1. Calcular salario com comissao");
+        System.out.println("2. Verificar saldo");
+        System.out.println("3. Calcular a media");
+        System.out.println("4. Contar alunos por media");
+        System.out.println("5. Sair programa\n");
+        
+        System.out.print("Digite a opcao desejada: ");
+        opcao = scanner.nextInt(); 
+        
+        switch(opcao) {
+            case 1:
+                System.out.println("\n--- CALCULO DE SALARIO E COMISSAO ---");
+                
+                System.out.print("Digite o salario: ");
+                salarioFixo = scanner.nextDouble();
+                
+                System.out.print("Digite o valor total das vendas: ");
+                valorVendas = scanner.nextDouble();
+                
+                if (valorVendas <= 1500.00) {
+                    comissao = valorVendas * 0.03;
+                } else {
+                    double comissao1 = 1500.00 * 0.03; 
+                    double excedente = valorVendas - 1500.00;
+                    double comissao2 = excedente * 0.05;
+                    
+                    comissao = comissao1 + comissao2;
+                }
+                
+                salarioTotal = salarioFixo + comissao;
+                
+                System.out.printf("Comissao ganha: %.2f\n", comissao);
+                System.out.printf("Salario Total a receber: %.2f\n", salarioTotal);
+                break;
+                
+                
+                
+                
+            case 2:
+                System.out.println("Voce escolheu: Verificar saldo");
+            
+                System.out.print("Digite a conta do cliente: ");
+                conta = scanner.nextInt();
+                
+                System.out.print("Conta acessada : " + conta);
+                
+                System.out.print("\nSaldo atual da conta: ");
+                saldo = scanner.nextDouble();
+                
+                System.out.print("\n------ DEBITO -----: ");
+                System.out.print("\nTotal de debitos da conta: ");
+                 debito = scanner.nextDouble();
+                
+                System.out.print("\n------ CREDITO -----: ");
+                System.out.print("\nTotal de creditos da conta: ");
+                credito = scanner.nextDouble();
+                
+                saldoAtual = saldo - debito + credito;
+                System.out.print("\nSaldo atual: " + saldoAtual);
+                
+                if(saldoAtual>=0) {
+                    System.out.println("\nSaldo Positivo");
+                }
+                
+                else{
+                    System.out.println("\nSaldo Negativo");
+                }
+                break;
+                
+                
+                
+                
+            case 3:
+                System.out.println("Voce escolheu: Calcular a media");
+                
+                System.out.print("Quantidade atual em estoque: ");
+                estoque = scanner.nextInt();
+                System.out.print("Quantidade maxima do estoque: ");
+                qtdeMax = scanner.nextInt();
+                System.out.print("Quantidade minima do estoque: ");
+                qtdeMin = scanner.nextInt();
+                
+                media = (qtdeMax+qtdeMin)/2;
+                System.out.print("Media: " + media);
+                
+                if(estoque>=media) {
+                    
+                    System.out.println("\nEstado do pedido: Nao efetuar compra");
+                }
+                
+                else {
+                    System.out.println("\nEstado do pedido: Efetuar");
+                }
+                break;
+                
+                
+                
+                
+            case 4: 
+                System.out.println("Voce escolheu: Contar alunos por media");
+                
+                System.out.println("\n ----- BEM VINDO(A) A TURMA -----");
+                
+                for(a=1; a<=20; a++) {
+                  System.out.print("Digite a nota do aluno " + a + ": ");
+                    alunos = scanner.nextInt();
+                    
+                    media = 
+                }
+                
+                break;
+                
+                
+                
+                
+            case 5:
+                System.out.println("Voce escolheu: Sair do programa");
+                break;
+        }
+        
+        scanner.close();
+    }
+}
