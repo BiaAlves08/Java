@@ -1,0 +1,89 @@
+package cadastroescolar;
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+
+/**
+ *
+ * @author Aluno CA
+ */
+public class CadAluno {
+    
+    String nome;
+    String dataNascimento;
+    int RA;
+    String email;
+    String telefone;
+   
+    
+    public void cadastrarAluno(String nome, String dataNascimento, int RA, String email, String telefone) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.RA = RA;
+        this.email= email;
+        this.telefone = telefone;
+    }
+    
+    public void verificarCadastro() {
+        System.out.println(" Nome: " + nome);
+        System.out.println(" Data de Nascimento: " + dataNascimento);
+        System.out.println(" Número de RA: " + RA);
+        System.out.println(" E-mail: " + email);
+        System.out.println(" Número de telefone: " + telefone);
+        
+    }
+    
+    public void exibirDados() {
+        System.out.println(" Nome: " + nome);
+        System.out.println(" Data de Nascimento: " + dataNascimento);
+        System.out.println(" Número de RA: " + RA);
+        System.out.println(" E-mail: " + email);
+        System.out.println(" Número de telefone: " + telefone);
+    }
+    
+    public void excluirDados () {
+        this.nome = "";
+        this.dataNascimento = "";
+        this.RA = 0;
+        this.email = "";
+        this.telefone = "";
+    }
+    
+}
+
+
+
+
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package cadastroescolar;
+
+/**
+ *
+ * @author Aluno CA
+ */
+public class CadastroEscolar {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        CadAluno aluno = new CadAluno();
+        aluno.cadastrarAluno("Bianca Santos", "11/08/2003", 2161412, "bianca1108alves@gmail.com", "11-967789123");
+        aluno.verificarCadastro();
+        aluno.exibirDados();
+        System.out.println("\n");
+        aluno.excluirDados();
+        aluno.exibirDados();
+    }
+    
+}
