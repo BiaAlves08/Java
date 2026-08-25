@@ -28,6 +28,11 @@ public class CalculadoraEtec {
     R2=A+B-C*D/E>= 5;
     System.out.println("Resposta: " + R2);
     System.exit(0);
+
+ R2=(A>=5)&&(B<=4);
+        System.out.println("Resposta: " + R2);
+        System.exit(0);
     
         
     }
+}
