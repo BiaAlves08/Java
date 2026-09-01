@@ -1,0 +1,25 @@
+package saldoCartão;
+
+import javax.swing.JOptionPane;
+
+public class SaldoCartão {
+    public static void main(String[] args) {
+
+        String ct = "Digite o saldo do cartão:";
+
+        String entrada = JOptionPane.showInputDialog(null, ct);
+
+        int saldo = Integer.parseInt(entrada);
+
+        if (saldo > 0) {
+            JOptionPane.showMessageDialog(null, "Saldo positivo.");
+        } else if (saldo < 0) {
+            JOptionPane.showMessageDialog(null, "Saldo negativo.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Saldo zerado.");
+        }
+
+        ct = "Seu saldo é: " + saldo;
+        JOptionPane.showMessageDialog(null, ct, "MENSAGEM", 1);
+    }
+}
