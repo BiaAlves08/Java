@@ -1,0 +1,48 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package calculoimc;
+
+import javax.swing.JOptionPane;
+
+public class CalculoImc {
+
+    public static void main(String[] args) {
+        String inputPeso = JOptionPane.showInputDialog("Digite o peso (Kg): ");
+        String inputAltura = JOptionPane.showInputDialog("Digite a altura (m): ");
+        
+        double peso = Double.parseDouble(inputPeso);
+        double altura = Double.parseDouble(inputAltura);
+        
+        double imc = peso / (altura * altura);
+        String classificacao;
+        
+        if (imc <18.5) {
+            classificacao = "Abaixo do peso";
+        }
+        
+        else if (imc <= 24.9) {
+            classificacao = "Peso normal";
+        }
+        
+        else if (imc <= 29.9) {
+            classificacao = "Sobrepeso";
+        }
+        
+        else if (imc <= 34.9) {
+            classificacao = "Obesidade grau 1";
+        }
+        
+        else if (imc <= 39.9) {
+            classificacao = "Obesidade grau 2";
+        }
+        
+        else {
+            classificacao = "Obesidade grau 3";
+        }
+        
+        JOptionPane.showMessageDialog(null, String.format("IMC: %.2f kg/mÂ²%nClassificaÃ§Ã£o: %s", imc, classificacao));
+    }
+    
+}
