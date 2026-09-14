@@ -1,0 +1,47 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package mencaoaluno;
+
+import javax.swing.JOptionPane;
+
+public class MencaoAluno {
+
+    public static void main(String[] args) {
+
+        String mencao = JOptionPane.showInputDialog("Digite a menção desejada: ");
+
+        mencao = mencao.trim().toUpperCase();
+
+        String resultado;
+
+        switch (mencao) {
+
+            case "MB":
+                resultado = "Muito bom";
+                break;
+
+            case "B":
+                resultado = "Bom";
+                break;
+
+            case "R":
+                resultado = "Regular";
+                break;
+
+            case "I":
+                resultado = "Insatisfatório";
+                break;
+
+            default:
+                resultado = "Menção inválida";
+                break;
+        }
+
+        JOptionPane.showMessageDialog(
+                null,
+                "Resultado: " + resultado
+        );
+    }
+}
