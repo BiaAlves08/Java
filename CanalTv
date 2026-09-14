@@ -1,68 +1,47 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package canaltv;
 
 import javax.swing.JOptionPane;
 
-
 public class CanalTv {
 
-    public static void main(String[] args) 
-        
-                { String cn = "Digite o número do canal:\n"
+    public static void main(String[] args) {
+        String menu = "Digite o número do canal:\n"
                 + "2 - Cultura\n"
                 + "4 - SBT\n"
                 + "5 - Globo\n"
                 + "7 - Record\n"
                 + "9 - Manchete\n"
                 + "11 - Gazeta\n"
-                + "13 - Bandeirantes \n";
-                
-                 cn = JOptionPane.showInputDialog(null, cn);
-       
-        int canal = Integer.parseInt(cn);
-                
-        switch(canal) {
-         case 2:
-             cn = "Cultura" ;
-                break;
-         case 4:
-             cn = "SBT";
-             break;
-             
-         case 5:
-             cn = "GLOBO";
-             break;
-             
-         case 7:
-             cn = "Record";
-             break;
-             
-         case 9:
-             cn = "Manchete";
-             break;
-             
-         case 11:
-             cn = "Gazeta";
-             break;
-             
-         case 13:
-             cn = "Bandeirantes";
-             break;
-             
-             default:
-                cn = "CANAL NÃO DISPONÍVEL";
-                JOptionPane.showMessageDialog(null, cn, "ERRO", 0);
-                System.exit(0);
+                + "13 - Bandeirantes\n";
+
+        String input = JOptionPane.showInputDialog(null, menu);
+
+        // Se o usuário clicar em "Cancelar" ou fechar a caixa de diálogo
+        if (input == null) {
+            return;
+        }
+
+        try {
+            int canal = Integer.parseInt(input.trim());
+            String nomeCanal;
+
+            switch (canal) {
+                case 2:  nomeCanal = "Cultura"; break;
+                case 4:  nomeCanal = "SBT"; break;
+                case 5:  nomeCanal = "Globo"; break;
+                case 7:  nomeCanal = "Record"; break;
+                case 9:  nomeCanal = "Manchete"; break;
+                case 11: nomeCanal = "Gazeta"; break;
+                case 13: nomeCanal = "Bandeirantes"; break;
+                default:
+                    JOptionPane.showMessageDialog(null, "CANAL NÃO DISPONÍVEL", "ERRO", JOptionPane.ERROR_MESSAGE);
+                    return;
+            }
+
+            JOptionPane.showMessageDialog(null, "Canal escolhido: " + nomeCanal, "MENSAGEM", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(null, "Entrada inválida! Digite apenas números inteiros.", "ERRO", JOptionPane.ERROR_MESSAGE);
+        }
     }
-        
-        cn = "Canal escolhido: " + cn;
-                JOptionPane.showMessageDialog(null, cn, "MENSAGEM", 1); 
-        System.exit(0);
-    
 }
-}
-
-
