@@ -1,0 +1,91 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package calculadora;
+
+/**
+ *
+ * @author Aluno CA
+ */
+public class Operacao {
+    int soma;
+    int menos;
+    int vezes;
+    float divisao;
+    
+    public int soma(int a, int b){
+        soma = a + b;
+        return soma;
+    }
+        public void imprimir(){
+            System.out.println("Valor da soma: " + soma);
+        }
+        
+       public int menos(int a, int b) {
+           menos = a - b;
+           return menos;
+       }
+       
+       public void Imprimir() {
+           System.out.println("Valor da subtração: " + menos);
+       }
+       
+       public int vezes(int a, int b){
+           vezes = a * b;
+           return vezes;
+       }
+       
+       public void IMPRIMIR() {
+           System.out.println("Vaor da multiplicação: " + vezes);
+       }
+       
+       public float divisao(float a, float b){
+           divisao = a / b;
+           return divisao;
+       }
+       
+       public void imprimiR(){
+           System.out.println("Valor da divisão: " + divisao);
+       }
+    }
+
+
+
+
+
+
+
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package calculadora;
+
+/**
+ *
+ * @author Aluno CA
+ */
+public class Calculadora {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Operacao op = new Operacao();
+        op.soma(5, 3);
+        op.imprimir();
+        
+    op.menos(100, 30);
+    op.Imprimir();
+    
+    op.vezes(5, 5);
+    op.IMPRIMIR();
+    
+    op.divisao(10, 7);
+    op.imprimiR();
+    }
+
+}
+
